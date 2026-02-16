@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Login.css";
 import { toast, ToastContainer } from "react-toastify";
 
-const API = "http://localhost:8080/api/auth/login";
+const API = "https://product-management-system-dtzj.onrender.com/api/auth/login";
 
 function Login() {
   const navigate = useNavigate();
