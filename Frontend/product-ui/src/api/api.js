@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://product-management-system-dtzj.onrender.com",
 });
 
 export const authConfig = (username, password) => ({
