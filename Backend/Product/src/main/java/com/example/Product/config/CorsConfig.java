@@ -2,22 +2,31 @@ package com.example.Product.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.cors.*;
+import org.springframework.web.filter.CorsFilter;
+
+import java.util.List;
 
 @Configuration
 public class CorsConfig {
 
     @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        .allowedOrigins("*")   // ✅ Allow all (simple)
-                        .allowedMethods("*")
-                        .allowedHeaders("*");
-            }
-        };
+    public CorsFilter corsFilter() {
+
+        CorsConfiguration config = new CorsConfiguration();
+
+        config.setAllowCredentials(true);
+
+        config.setAllowedOrigins(List.of(
+                "https://product-management-system-dusky.vercel.app"
+        ));
+
+        config.setAllowedHeaders(List.of("*"));
+        config.setAllowedMethods(List.of("*"));
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+
+        return new CorsFilter(source);
     }
 }
