@@ -7,7 +7,7 @@ import * as XLSX from "xlsx";
 import jsPDF from "jspdf";
 import { FaMoon, FaSun, FaFileExcel, FaFilePdf } from "react-icons/fa";
 
-const API = "http://localhost:8080/api/products";
+const API = "https://product-management-system-dtzj.onrender.com/api/products";
 const COLORS = ["#00ffd5", "#00c3ff", "#ffbb28", "#ff8042"];
 
 function Dashboard() {
