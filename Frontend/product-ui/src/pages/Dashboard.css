@@ -1,0 +1,194 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ✅ THEMES */
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.light {
+  background: #f1f5f9;
+  color: black;
+}
+
+/* ✅ SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #020617;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar h2 {
+  margin-bottom: 10px;
+}
+
+.sidebar button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #00c3ff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ✅ MAIN AREA */
+.main {
+  flex: 1;
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ✅ TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.top-actions button {
+  background: #00c3ff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.logout {
+  background: red !important;
+}
+
+/* ✅ STATS (FIXED GRID = NO SHIFTING 🔥) */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card-stat {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-height: 100px;   /* 🔥 FIXED HEIGHT */
+}
+
+/* ✅ CHARTS */
+.charts {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* ✅ FORM (PERFECT ALIGNMENT 🔥) */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 120px;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.form button {
+  background: #00c3ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* ✅ SEARCH */
+.search {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/* ✅ PRODUCT CARD (NO RESIZE / NO COLLAPSE 🔥) */
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background: #1e293b;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  align-items: center;
+  min-height: 90px;   /* 🔥 FIXED SIZE */
+}
+
+/* ✅ ACTION BUTTONS */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.actions button:first-child {
+  background: #00ffd5;
+}
+
+.actions button:last-child {
+  background: red;
+  color: white;
+}
+
+/* ✅ PAGINATION */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #00c3ff;
+  color: white;
+  cursor: pointer;
+}
+
+.loading,
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0.7;
+}
